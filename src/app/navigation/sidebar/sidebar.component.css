@@ -1,0 +1,32 @@
+#sidebar {
+  max-width: 100px;
+  min-height: 100vh;
+  position: absolute;
+  padding: 8rem .5rem 0 0;
+  right: 0;
+  z-index: 1;
+}
+
+.add-button {
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.add-text {
+  color: #0B6ECF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+}
+
+.help-button {
+  padding-top: 5rem;
+  position: absolute;
+  right: 0;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}

@@ -1,0 +1,25 @@
+.card {
+  background-color: #F4FAFD;
+  border: none;
+  margin-right: 5rem;
+  padding: .6rem;
+  margin-bottom: 1rem;
+}
+
+.card-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location-detail-subtext {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.edit-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}

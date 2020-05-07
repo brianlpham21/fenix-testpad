@@ -1,0 +1,10 @@
+.selected {
+  background-color: white !important;
+  border-bottom: 3px solid #009688;
+  color: #009688 !important;
+}
+
+.ellipsis-icon:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}

@@ -1,0 +1,35 @@
+#main-sidebar {
+  width: 250px;
+  min-height: 100%;
+  background-color: #F8F8F8;
+  padding: 1.8rem 2.5rem;
+}
+
+.navbar-links {
+  padding: 2rem 0;
+}
+
+.navbar-links li {
+  padding: .4rem 0;
+}
+
+.main-nav-icon {
+  display: inline-block;
+  width: 35px;
+}
+
+.nav-link-text {
+  font-weight: bold;
+  font-size: 14px;
+  color: #383838;
+}
+
+.nav-logout-text {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}

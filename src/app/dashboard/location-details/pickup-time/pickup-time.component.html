@@ -1,0 +1,24 @@
+<table class="table table-borderless mt-3">
+  <thead>
+    <tr>
+      <th class="text-muted" scope="col">Carriers</th>
+      <th class="text-center text-muted" scope="col">M</th>
+      <th class="text-center text-muted" scope="col">T</th>
+      <th class="text-center text-muted" scope="col">W</th>
+      <th class="text-center text-muted" scope="col">T</th>
+      <th class="text-center text-muted" scope="col">F</th>
+      <th class="text-center text-muted" scope="col">S</th>
+      <th class="text-center text-muted" scope="col">S</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let carrier of carriers">
+      <th scope="row text-center">
+        <div class="text-nowrap">
+          <mat-slide-toggle checked="true"></mat-slide-toggle> {{ carrier.name }}
+        </div>
+      </th>
+      <td class="text-center" *ngFor="let time of carrier.pickupTimings">{{ time.time }}</td>
+    </tr>
+  </tbody>
+</table>

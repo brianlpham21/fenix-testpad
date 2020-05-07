@@ -1,0 +1,14 @@
+<div class="dashboard-container">
+  <h1 class="header">Fulfillment Location</h1>
+  <div class="row">
+    <div class="col-md-5">
+      <app-locations [locations]="loadedData.locations"></app-locations>
+    </div>
+    <div class="col-md-7">
+      <app-location-details [locations]="loadedData.locations"></app-location-details>
+    </div>
+  </div>
+  <div *ngIf="loadedData">Current Page: {{ loadedData.currentPage }}</div>
+  <div *ngIf="loadedData">Total Items: {{ loadedData.totalItems }}</div>
+  <div *ngIf="loadedData">Total Items in Page: {{ loadedData.totalItemsInPage }}</div>
+</div>

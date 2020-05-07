@@ -1,0 +1,8 @@
+* {
+  font-family: sans-serif;
+}
+
+.app-container {
+  display: flex;
+  align-items: stretch;
+}

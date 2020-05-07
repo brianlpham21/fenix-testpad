@@ -1,0 +1,92 @@
+<div class="card">
+  <div class="card-body">
+    <div class=card-title-container>
+      <div>
+        <div class="d-flex align-items-center">
+          <mat-slide-toggle checked="true"></mat-slide-toggle>
+          <span class="ml-3">
+            <p class="card-subtitle text-muted">Locations ID</p>
+            <h5 class="card-title mb-0">{{ locations[0].id }}</h5>
+          </span>
+        </div>
+      </div>
+      <img src="../../../assets/edit-button.svg" alt="edit-button" class="edit-button">
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div class=card-title-container>
+      <h5 class="card-title">Location Details</h5>
+      <img src="../../../assets/edit-button.svg" alt="edit-button" class="edit-button">
+    </div>
+    <div class="row mb-3">
+      <div class="col text-muted">Location Type<span class="ml-2 text-dark">{{ locations[0].locType }}</span></div>
+      <div class="col text-muted">Country <span class="ml-2 text-dark">{{ locations[0].address.country }}</span></div>
+    </div>
+    <div class="row mb-3">
+      <div class="col text-muted">State <span class="ml-2 text-dark">{{ locations[0].address.state }}</span></div>
+      <div class="col text-muted">City <span class="ml-2 text-dark">{{ locations[0].address.city }}</span></div>
+      <div class="col text-muted">ZipCode <span class="ml-2 text-dark">{{ locations[0].address.zipcode }}</span></div>
+    </div>
+    <div class="text-muted mb-3">Address Line 1 <span class="ml-2 text-dark">{{ locations[0].address.address1 }}</span></div>
+    <div class="text-muted mb-3">Address Line 2 <span class="ml-2 text-dark">{{ locations[0].address.address2 }}</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div class=card-title-container>
+      <h5 class="card-title mb-0">Lead Time <span class="text-muted location-detail-subtext">In Hours</span></h5>
+      <div>{{ locations[0].leadTime }}</div>
+      <img src="../../../assets/edit-button.svg" alt="edit-button" class="edit-button">
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div class=card-title-container>
+      <h5 class="card-title mb-">Cut Off Time <span class="text-muted location-detail-subtext">In CST</span></h5>
+      <img src="../../../assets/edit-button.svg" alt="edit-button" class="edit-button">
+    </div>
+    <h6 class="card-subtitle font-italic">Weekly Schedule</h6>
+    <div class="row mt-4">
+      <div class="col" *ngFor="let day of locations[0].cutoffTimings">
+        <div class="row justify-content-center font-weight-bold text-muted">{{ day.day.substring(0, 1) }}</div>
+        <div class="row justify-content-center">{{ day.time }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div class=card-title-container>
+      <h5 class="card-title mb-">Pickup Time <span class="text-muted location-detail-subtext">In CST</span></h5>
+      <img src="../../../assets/edit-button.svg" alt="edit-button" class="edit-button">
+    </div>
+    <h6 class="card-subtitle font-italic">Weekly Schedule</h6>
+    <app-pickup-time [carriers]="locations[0].carrierInfos"></app-pickup-time>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div class=card-title-container>
+      <h5 class="card-title mb-">Active Carrier Services <span class="text-muted location-detail-subtext">Overwrite default pickup time</span></h5>
+      <img src="../../../assets/edit-button.svg" alt="edit-button" class="edit-button">
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div class=card-title-container>
+      <h5 class="card-title mb-">Holidays</h5>
+      <img src="../../../assets/edit-button.svg" alt="edit-button" class="edit-button">
+    </div>
+    <div class="text-muted">No Holidays.</div>
+  </div>
+</div>
