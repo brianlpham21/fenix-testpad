@@ -12,6 +12,7 @@ import { LocationsComponent } from './dashboard/locations/locations.component';
 import { LocationDetailsComponent } from './dashboard/location-details/location-details.component';
 import { PickupTimeComponent } from './dashboard/location-details/pickup-time/pickup-time.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarrierServicesComponent } from './dashboard/location-details/carrier-services/carrier-services.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LocationsComponent,
     LocationDetailsComponent,
     PickupTimeComponent,
+    CarrierServicesComponent,
   ],
   imports: [
     BrowserModule,

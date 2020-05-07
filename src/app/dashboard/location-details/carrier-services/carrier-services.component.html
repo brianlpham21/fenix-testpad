@@ -1,0 +1,22 @@
+<ul class="nav nav-tabs mb-2">
+  <li class="nav-item" *ngFor="let carrier of carriers" (click)="onSelectCarrier($event, carrier.name)">
+    <a class="nav-link text-muted" [ngClass]="{selected: selectedCarrier === carrier.name}" href="#">{{ carrier.name }}</a>
+  </li>
+</ul>
+
+<table class="table table-borderless mt-3">
+  <thead>
+    <tr>
+      <th class="text-muted" scope="col">Service Name</th>
+      <th class="text-muted" scope="col">Custom Service Name</th>
+      <th class="text-muted" scope="col">Pickup Time</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let carrier of carriers" [hidden]="selectedCarrier !== carrier.name">
+    <tr *ngFor="let service of carrier.activeServices" class="bg-white">
+      <td>{{ service.name }}</td>
+      <td>{{ service.code }}</td>
+      <td>Pickup Time</td>
+    </tr>
+  </tbody>
+</table>
