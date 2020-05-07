@@ -1,9 +1,9 @@
 <nav class="nav nav-pills flex-column flex-sm-row mb-3">
   <a class="flex-sm-fill text-sm-left nav-link text-muted" [ngClass]="{selected: locationSelect === 'active'}" href="#" (click)="onLocationSelect('active')">
-    Active Locations - {{ locations.length }}
+    Active Locations ({{ locations.length }})
   </a>
   <a class="flex-sm-fill text-sm-left nav-link text-muted" [ngClass]="{selected: locationSelect === 'inactive'}" href="#" (click)="onLocationSelect('inactive')">
-    Inactive Locations - 0
+    Inactive Locations (0)
   </a>
 </nav>
 
